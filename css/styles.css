@@ -1,0 +1,616 @@
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 424px; /* Fija la altura según tus imágenes */
+}
+.carousel-inner>.item>img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Asegura que las imágenes se ajusten al espacio */
+  display: block;
+}
+
+/* container */
+.responsive-three-column-grid {
+  display: block;
+}
+
+/* columns */
+.responsive-three-column-grid>* {
+  padding: 1rem;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+  .responsive-three-column-grid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* General styling for the navigation bar */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e9e9e9;
+  padding: 0 16px; /* Add padding for horizontal spacing */
+  height: 70px;
+}
+
+/* Logo and Menu Section */
+.logo-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the logo and the menu */
+}
+
+.menu {
+  display: flex;
+  gap: 10px; /* Space between menu items */
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.menu a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Center Section (Image Title) */
+.center-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Ensures the image stays centered */
+}
+
+.center-section img {
+  height: 50px;
+}
+
+/* Slogan Section */
+.slogan-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px; /* Space between words in the slogan */
+}
+
+.slogan {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.dark-blue-font {
+  color: rgb(5, 64, 177, 0.99);
+}
+
+.soft-blue-font {
+  color: rgb(33, 150, 243, 0.99);
+}
+
+/* Search Box Section */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+  .topnav {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .logo-menu {
+    order: 1; /* Ensure it appears first */
+    flex-basis: 100%;
+    justify-content: flex-start;
+  }
+
+  .center-section {
+    order: 2;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .slogan-section {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .search-box {
+    order: 4;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu a {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .center-section img {
+    height: 40px;
+  }
+
+  .slogan {
+    font-size: 14px;
+  }
+
+  .search {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
+
+
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #2f2f2f;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer>* {
+  flex: 1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav>* {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav>* {
+    flex: 1;
+  }
+
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+
+  .footer__addr {
+    flex: 1 0px;
+  }
+
+  .footer__nav {
+    flex: 2 0px;
+  }
+
+
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  @charset "UTF-8";
+
+  .svg-inline--fa {
+    vertical-align: -0.200em;
+  }
+
+  .rounded-social-buttons {
+    text-align: center;
+  }
+
+  .rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.725rem;
+    height: 3.725rem;
+    border: 0.5rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .rounded-social-buttons .social-button:hover,
+  .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  .rounded-social-buttons .fa-twitter,
+  .fa-facebook-f,
+  .fa-linkedin,
+  .fa-tiktok,
+  .fa-youtube,
+  .fa-instagram {
+    font-size: 25px;
+  }
+
+  .rounded-social-buttons .social-button.facebook {
+    background: #3b5998;
+  }
+
+  .rounded-social-buttons .social-button.facebook:hover,
+  .rounded-social-buttons .social-button.facebook:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+  }
+
+  .rounded-social-buttons .social-button.twitter {
+    background: #55acee;
+  }
+
+  .rounded-social-buttons .social-button.twitter:hover,
+  .rounded-social-buttons .social-button.twitter:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+  }
+
+  .rounded-social-buttons .social-button.linkedin {
+    background: #007bb5;
+  }
+
+  .rounded-social-buttons .social-button.linkedin:hover,
+  .rounded-social-buttons .social-button.linkedin:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
+  }
+
+  .rounded-social-buttons .social-button.tiktok {
+    background: #000000;
+  }
+
+  .rounded-social-buttons .social-button.tiktok:hover,
+  .rounded-social-buttons .social-button.tiktok:focus {
+    color: #000000;
+    background: #fefefe;
+    border-color: #000000;
+  }
+
+  .rounded-social-buttons .social-button.youtube {
+    background: #bb0000;
+  }
+
+  .rounded-social-buttons .social-button.youtube:hover,
+  .rounded-social-buttons .social-button.youtube:focus {
+    color: #bb0000;
+    background: #fefefe;
+    border-color: #bb0000;
+  }
+
+  .rounded-social-buttons .social-button.instagram {
+    background: #125688;
+  }
+
+  .rounded-social-buttons .social-button.instagram:hover,
+  .rounded-social-buttons .social-button.instagram:focus {
+    color: #125688;
+    background: #fefefe;
+    border-color: #125688;
+  }
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+
+*, 
+*:before, 
+*:after {
+   @include box-sizing(border-box); 
+}
+
+h1 {
+   text-align: center;
+   color: #a8a8a8;
+   @include text-shadow(1px 1px 0 rgba(white, 1));
+}
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+  
+  input, textarea {
+     border:0; outline:0;
+     padding: 1em;
+     @include border-radius(8px);
+     display: block;
+     width: 100%;
+     margin-top: 1em;
+     font-family: 'Merriweather', sans-serif;
+     @include box-shadow(0 1px 1px rgba(black, 0.1));
+     resize: none;
+    
+    &:focus {
+       @include box-shadow(0 0px 2px rgba($red, 1)!important);
+    }
+  }
+  
+  #input-submit {
+     color: white; 
+     background: $red;
+     cursor: pointer;
+    
+    &:hover {
+       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
+    }
+  }
+  
+  textarea {
+      height: 100px;
+  }
+}
+
+
+/* Estilos generales Formulario */
+.cf {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%; /* Espacio entre las columnas */
+  margin-top: 20px; /* Añadir un pequeño margen superior */
+}
+
+.half {
+  flex: 1 1 48%; /* Usamos flexbox para mayor flexibilidad */
+  margin-bottom: em;
+}
+
+.right {
+  flex: 1 1 50%; /* Hacemos que el 50% se asigne a la sección derecha */
+}
+
+.left {
+  flex: 1 1 48%; /* Hacemos que la sección izquierda ocupe el 48% */
+}
+
+/* Estilo para los inputs y textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Asegura que el padding y el border se cuenten dentro del ancho total */
+}
+
+textarea {
+  resize: vertical; /* Permite al usuario redimensionar el área de texto solo en dirección vertical */
+}
+
+/* Botón de submit */
+#input-submit {
+  background-color: #00b7cf;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* El botón también debe ocupar todo el ancho disponible en pantallas pequeñas */
+  font-size: 16px;
+}
+
+/* Agregar hover para el botón */
+#input-submit:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 480px) {
+  .half {
+    width: 100%; /* En pantallas pequeñas, las secciones de la izquierda y derecha ocupan el 100% */
+    float: none;
+    margin-bottom: 0; /* Eliminar margen inferior en pantallas pequeñas */
+  }
+
+  #input-submit {
+    width: 100%; /* El botón debe ocupar el 100% del ancho en dispositivos pequeños */
+  }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px; /* Ajusta el ancho máximo si es necesario */
+  margin: 20px;
+}
+
+/* Sección de texto */
+.text-section {
+  flex: 1; /* Hace que esta sección ocupe el espacio disponible */
+  padding-right: 20px; /* Espacio entre el texto y la imagen */
+}
+
+/* Sección de la imagen */
+.image-section {
+  flex: 1; /* Hace que la imagen ocupe el mismo espacio que el texto */
+}
+
+/* Asegurarse de que la imagen sea responsiva */
+.image-section img {
+  width: 100%; /* La imagen ocupa el 100% del espacio de su contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Opcional: bordes redondeados para la imagen */
+}
+
+/* Media query para pantallas más pequeñas (tablets) */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Apila el texto y la imagen verticalmente */
+    text-align: center; /* Centra el texto en pantallas más pequeñas */
+  }
+
+  .text-section {
+    padding-right: 0; /* Elimino el padding a la derecha cuando están apilados */
+  }
+
+  .image-section {
+    margin-top: 20px; /* Espacio entre el texto y la imagen cuando se apilan */
+  }
+}
+
+/* Media query para pantallas muy pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+  .content-container {
+    padding: 10px; /* Menos margen en pantallas más pequeñas */
+  }
+
+  .image-section img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+  }
+}
